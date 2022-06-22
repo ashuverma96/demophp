@@ -1,0 +1,43 @@
+[
+	{
+		"type":"get_pdf_data",
+		"input":"id",
+		"output":"json",
+		"error_code":0
+	},{
+		"type":"FIELD_TYPE_TEXT",
+		"input":"-1",
+		"output":"<input type='text' class='pdf_to_form'/>",
+		"error_code":-1
+	}
+	,{
+		"type":"FIELD_TYPE_CHECKBOX",
+		"input":"-1",
+		"output":"<input type='checkbox' class='pdf_to_form'/>",
+		"error_code":-1
+	}
+	,{
+		"type":"FIELD_TYPE_RADIOBUTTON",
+		"input":"-1",
+		"output":"<input type='radio' class='pdf_to_form'/>",
+		"error_code":-1
+	}
+	,{
+		"type":"FIELD_TYPE_SIGNATURE",
+		"input":"-1",
+		"output":"<img src=''  class='pdf_to_form'/>",
+		"error_code":-1
+	}
+	,{
+		"type":"FIELD_TYPE_COMBO",
+		"input":"-1",
+		"output":"<p></p>",
+		"error_code":-1
+	}
+	,{
+		"type":"text_data",
+		"input":"-1",
+		"output":"<p></p>",
+		"error_code":-1
+	}
+]

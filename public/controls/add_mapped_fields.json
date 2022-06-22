@@ -1,0 +1,179 @@
+[
+	{"validation":[{
+		"input_params":"template",
+		"value":"a-zA-Z0-9_",
+		"required":"yes",
+		"max_length":"50",
+		"error":[
+			{
+				"value":"Template name should contain only a-zA-Z0-9_"
+			},
+			{
+				"required":"Template name is mandatory"
+			},
+			{
+				"max_length":"Template name should be less than 50 characters"
+			}
+
+		]
+
+
+
+	},
+	{
+		"input_params":"user_id",
+		"value":"-1",
+		"required":"yes",
+		"max_length":"-1",
+		"error":[
+			
+			{
+				"required":"User Id is mandatory"
+			}
+			
+		]
+
+
+
+	},
+	{
+		"input_params":"width",
+		"value":"-1",
+		"required":"yes",
+		"max_length":"-1",
+		"error":[
+			
+			{
+				"required":"PDF file is mandatory"
+			}
+			
+		]
+
+
+
+	},
+	{
+		"input_params":"height",
+		"value":"-1",
+		"required":"yes",
+		"max_length":"-1",
+		"error":[
+			
+			{
+				"required":"PDF file is mandatory"
+			}
+			
+		]
+
+
+
+	},
+	{
+		"input_params":"total_page_no",
+		"value":"-1",
+		"required":"yes",
+		"max_length":"-1",
+		"error":[
+			
+			{
+				"required":"PDF file total page number is mandatory"
+			}
+			
+		]
+
+
+
+	},
+	{
+		"input_params":"data_url",
+		"value":"-1",
+		"required":"yes",
+		"max_length":"-1",
+		"error":[
+			
+			{
+				"required":"Schema URL is mandatory"
+			}
+			
+		]
+
+
+
+	}
+	,
+	{
+		"input_params":"uploaded_file_id",
+		"value":"-1",
+		"required":"yes",
+		"max_length":"-1",
+		"error":[
+			
+			{
+				"required":"PDF file is mandatory"
+			}
+			
+		]
+
+
+
+	},
+	{
+		"input_params":"time",
+		"value":"-1",
+		"required":"yes",
+		"max_length":"-1",
+		"error":[
+			
+			{
+				"required":"Time Zone is mandatory"
+			}
+			
+		]
+
+
+
+	}
+
+]}
+	,{
+		"insert_collection":"mapped_field_details_api",
+		"input":"json",
+		"output":true,
+		"erro_code":0
+	},{
+		"run_jar_file":"yes",
+		"input":"file",
+		"output":"json",
+		"erro_code":1
+	}
+	,{
+		"insert_collection":"collection_pdf_to_form_",
+		"input":"json",
+		"output":true,
+		"erro_code":2
+	}
+	,{
+		"run_ghost_script":"yes",
+		"input":"file",
+		"output":"file",
+		"erro_code":3
+	}
+	,{
+		"insert_collection":"collection_pdf_details_",
+		"input":"json",
+		"output":true,
+		"erro_code":4
+	}
+	,{
+		"run_curl":"yes",
+		"input":"url",
+		"output":"json",
+		"erro_code":5
+	}
+,{
+		"insert_collection":"collection_template_",
+		"input":"json",
+		"output":true,
+		"erro_code":6
+	}
+]
